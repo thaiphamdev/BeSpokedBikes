@@ -18,7 +18,7 @@ public class SpokedbikesapiApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/api/*").allowedOrigins("http://localhost:3000");
+				registry.addMapping("/api/**").allowedMethods("GET", "POST", "PUT").allowedOrigins("http://localhost:3000");
 			}
 		};
 	}

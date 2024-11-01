@@ -1,6 +1,7 @@
 package com.bespokedbikes.spokedbikesapi.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,7 @@ public class ProductServiceImpl implements ProductService{
     }
 
 	@Override
-	public Product findById(Long id) {
-		return productDao.findById(id).orElse(null);
+	public Optional<Product> findById(Long id) {
+		return productDao.findById(id);
 	}
 }

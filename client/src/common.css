@@ -5,3 +5,30 @@
 .Heading {
     text-align: center;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #b3b3b3;
+}
+
+tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+tr.active {
+    background-color: #e0e0e0;
+}
+
+.marginTop5 {
+    margin-top: 5px;
+}

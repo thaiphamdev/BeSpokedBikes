@@ -12,11 +12,9 @@ CREATE TABLE Product (
 );
 
 INSERT INTO Product (name, manufacturer, style, purchase_price, sale_price, qty_on_hand, commission_percentage)
-VALUES ('Road Bike', 'Trek', 'Casual', 200.00, 250.00, 10, 10.00);
-INSERT INTO Product (name, manufacturer, style, purchase_price, sale_price, qty_on_hand, commission_percentage)
-VALUES ('Road Bike', 'Trek', 'Sport', 300.00, 400.00, 15, 15.00);
-INSERT INTO Product (name, manufacturer, style, purchase_price, sale_price, qty_on_hand, commission_percentage)
-VALUES ('Mountain Bike', 'Trek', 'Sport', 400.00, 550.00, 5, 12.00);
+VALUES ('Road Bike', 'Trek', 'Casual', 200.00, 250.00, 10, 10.00),
+ ('Road Bike', 'Trek', 'Sport', 300.00, 400.00, 15, 15.00),
+ ('Mountain Bike', 'Trek', 'Sport', 400.00, 550.00, 5, 12.00);
 
 CREATE TABLE Salesperson (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -30,8 +28,8 @@ CREATE TABLE Salesperson (
 );
 
 INSERT INTO Salesperson (first_name, last_name, address, phone, start_date, termination_date, manager)
-VALUES ('Steve', 'Doe', '123 Main St, Alpharetta, GA', '678-555-1234', '2022-10-01', NULL, 'Matt Smith');
-VALUES ('Samantha', 'Jang', '777 Main St, Duluth, GA', '770-555-1234', '2020-07-21', NULL, 'Matt Smith');
+VALUES ('Steve', 'Doe', '123 Main St, Alpharetta, GA', '678-555-1234', '2022-10-01', NULL, 'Matt Smith'),
+	('Samantha', 'Jang', '777 Main St, Duluth, GA', '770-555-1234', '2020-07-21', NULL, 'Matt Smith');
 
 CREATE TABLE Customer (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -43,9 +41,9 @@ CREATE TABLE Customer (
 );
 
 INSERT INTO Customer (first_name, last_name, address, phone, start_date)
-VALUES ('Alice', 'Johnson', '456 Elm St, Springfield, IL', '226-555-9876', '2024-10-31');
-VALUES ('Bob', 'Jing', '2303 Road St, Springfield, CA', '222-555-9876', '2024-10-31');
-VALUES ('Charles', 'Yang', '1202 Washington St, Springfield, CO', '346-555-9876', '2024-10-31');
+VALUES ('Alice', 'Johnson', '456 Elm St, Springfield, IL', '226-555-9876', '2024-10-31'),
+ ('Bob', 'Jing', '2303 Road St, Springfield, CA', '222-555-9876', '2024-10-31'),
+ ('Charles', 'Yang', '1202 Washington St, Springfield, CO', '346-555-9876', '2024-10-31');
 
 CREATE TABLE Sales (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -59,12 +57,12 @@ CREATE TABLE Sales (
 );
 
 INSERT INTO Sales (product_id, salesperson_id, customer_id, sales_date)
-VALUES (1, 1, 1, '2024-10-31');
-VALUES (2, 1, 2, '2024-09-22');
-VALUES (3, 1, 3, '2024-09-27');
-VALUES (3, 2, 1, '2024-10-31');
-VALUES (1, 2, 2, '2024-10-09');
-VALUES (3, 2, 3, '2024-10-27');
+VALUES (1, 1, 1, '2024-10-31'),
+ (2, 1, 2, '2024-09-22'),
+ (3, 1, 3, '2024-09-27'),
+ (3, 2, 1, '2024-10-31'),
+ (1, 2, 2, '2024-10-09'),
+ (3, 2, 3, '2024-10-27');
 
 
 

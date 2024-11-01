@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,18 +25,6 @@ public class SalespersonController {
     @GetMapping
     public List<Salesperson> getAllSalespersons() {
         return salespersonService.findAll();
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<Salesperson> getSalespersonById(@PathVariable Long id) {
-        Optional<Salesperson> salesperson = salespersonService.findById(id);
-        return salesperson.map(ResponseEntity::ok)
-                          .orElseGet(() -> ResponseEntity.notFound().build());
-    }
-
-    @PostMapping
-    public Salesperson createSalesperson(@RequestBody Salesperson salesperson) {
-        return salespersonService.save(salesperson);
     }
 
     @PutMapping("/{id}")

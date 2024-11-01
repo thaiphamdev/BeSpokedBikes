@@ -1,6 +1,7 @@
 package com.bespokedbikes.spokedbikesapi.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -13,5 +14,5 @@ public interface ProductService {
 
     public Product save(Product product);
 
-    public Product findById(Long id);
+    public Optional<Product> findById(Long id);
 }

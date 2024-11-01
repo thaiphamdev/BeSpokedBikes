@@ -1,0 +1,17 @@
+.selectRow {
+    padding: 10px 0;
+}
+
+.marginLeft10 {
+    margin-left: 10px;
+    ;
+}
+
+.newSalesFormContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    height: 200px;
+    margin: auto;
+}

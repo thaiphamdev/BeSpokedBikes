@@ -1,5 +1,3 @@
-import './product.css';
-import '../../common.css'
 import ProductPage from './product';
 import { connect } from 'react-redux';
 import { getProducts, updateProduct } from './productActions';

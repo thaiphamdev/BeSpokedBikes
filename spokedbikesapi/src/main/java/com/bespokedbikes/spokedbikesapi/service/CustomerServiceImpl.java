@@ -1,7 +1,6 @@
 package com.bespokedbikes.spokedbikesapi.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,15 +17,5 @@ public class CustomerServiceImpl implements CustomerService{
     @Override
     public List<Customer> findAll() {
         return customerDao.findAll();
-    }
-
-    @Override
-    public Optional<Customer> findById(Long id) {
-        return customerDao.findById(id);
-    }
-
-    @Override
-    public Customer save(Customer customer) {
-        return customerDao.save(customer);
     }
 }

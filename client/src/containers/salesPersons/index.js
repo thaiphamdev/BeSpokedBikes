@@ -1,5 +1,3 @@
-import './salesPersons.css';
-import '../../common.css'
 import SalesPersonsPage from './salesPersons';
 import { connect } from 'react-redux';
 import { getSalesPersons, updateSalesPerson } from './salesPersonsActions';

@@ -49,3 +49,26 @@ export const putAPI = async (endPoint, payload, extraOptions) => {
         return errorObj;
     }
 }
+
+export const postAPI = async (endPoint, payload, extraOptions) => {
+    const options = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        ...extraOptions
+    }
+    const url = `${HOST}/${endPoint}`;
+    try {
+        const response = await fetch(url, options);
+        if (!response.ok) {
+            return errorObj;
+        }
+        const data = await response.json();
+        return {
+            success: true,
+            data
+        };
+    } catch (error) {
+        return errorObj;
+    }
+}

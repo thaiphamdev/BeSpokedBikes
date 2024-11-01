@@ -1,6 +1,7 @@
 import React, { useEffect, useState }  from 'react';
 import './product.css';
 import '../../common.css'
+import { priceFormat } from '../../utils';
 
 const ProductPage = (props) => {
         const { products, getProducts, updateProduct } = props;
@@ -109,8 +110,8 @@ const ProductPage = (props) => {
                         <td>{product.name}</td>
                         <td>{product.manufacturer}</td>
                         <td>{product.style}</td>
-                        <td>{product.purchasePrice}</td>
-                        <td>{product.salePrice}</td>
+                        <td>{`$ ${priceFormat(product.purchasePrice)}`}</td>
+                        <td>{`$ ${priceFormat(product.salePrice)}`}</td>
                         <td>{product.qtyOnHand}</td>
                         <td>{product.commissionPercentage}</td>
                         <td><button onClick={() => handleEditClick(product)}>Edit</button></td>

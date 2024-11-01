@@ -37,4 +37,13 @@
   }
 }
 
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+
 
